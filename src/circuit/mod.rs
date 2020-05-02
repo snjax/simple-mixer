@@ -43,6 +43,9 @@ pub struct CWithdrawSec<'a, CS:ConstraintSystem, H:Unsigned> {
 }
 
 pub fn c_withdraw<'a,CS:ConstraintSystem, H:Unsigned>(p:&CWithdrawPub<'a, CS>, s:&CWithdrawSec<'a, CS,H>, params:&MixerParams<CS::F>){
+    //assert bits
+    s.proof.path.iter().for_each(|bit| bit.assert());
+       
     //check nullifier
     (&p.nullifier - s.note.nullifier(params)).assert_zero();
 
