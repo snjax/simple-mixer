@@ -29,8 +29,7 @@ use lazy_static::lazy_static;
 lazy_static! {
     static ref MIXER_PARAMS: MixerParams<Fr> = MixerParams::<Fr> {
         hash: PoseidonParams::<Fr>::new(2, 8, 53),
-        compress: PoseidonParams::<Fr>::new(3, 8, 53),
-        eddsa: PoseidonParams::<Fr>::new(4, 8, 54)
+        compress: PoseidonParams::<Fr>::new(3, 8, 53)
     };
 }
 

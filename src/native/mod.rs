@@ -10,8 +10,7 @@ use crate::constants::{SEED_NOTE_HASH, SEED_NULLIFIER};
 #[derive(Debug, Clone)]
 pub struct MixerParams<F:PrimeField> {
     pub hash: PoseidonParams<F>,
-    pub compress: PoseidonParams<F>,
-    pub eddsa: PoseidonParams<F>
+    pub compress: PoseidonParams<F>
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
