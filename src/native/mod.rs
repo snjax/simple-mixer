@@ -1,3 +1,5 @@
+pub mod gen_test_data;
+
 use fawkes_crypto::native::num::Num;
 use fawkes_crypto::native::poseidon::{poseidon_with_salt, PoseidonParams, MerkleProof};
 use ff::{PrimeField};
